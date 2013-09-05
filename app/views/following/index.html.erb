@@ -1,0 +1,17 @@
+<p>
+  <b> Followings: </b>
+  <span id ="following_title">
+    <table> 
+      <tr> 
+        <td> Name: </td>
+        <td> Screen name: </td>
+      </tr>
+        <% @followings.each do |following| %>
+      <tr>
+          <td><%= following.name %></td>
+          <td><%= following.screen_name %></td>
+        <%end%>
+      </tr>
+    </table>
+  </span>
+</p>
