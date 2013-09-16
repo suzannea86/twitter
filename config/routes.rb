@@ -1,8 +1,18 @@
 Twitter::Application.routes.draw do
   
-  resources :follower
+  controller :followers do 
+    get 'followers' => :index
+  end
 
-  resources :following
+  resources :following do
+    get 'following' => :index
+  end
+
+  resources :users do
+    get :followers, :on => :member
+  end
+
+  resources :tweets
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

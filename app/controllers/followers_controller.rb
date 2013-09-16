@@ -1,4 +1,4 @@
-class FollowerController < ApplicationController
+class FollowersController < ApplicationController
   def index
     @followers = Twitter.followers.all
 
