@@ -7,6 +7,7 @@ class UsersController < ApplicationController
       format.json do
         render json: followers.map {|follower| {:name => follower.name}}
       end
+      format.html{render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found}
     end
   end
 end
